@@ -1,0 +1,14 @@
+Your Cart:
+<%= session[:cart]%>
+
+</ul>
+Add an Item:
+<%= form_tag ({controller: 'products',
+    action: 'add',
+    method: 'post'}) do %>
+ 
+  <%= label_tag :product %>
+  <%= text_field_tag :product %>
+  <%= submit_tag "add to cart" %>
+  
+  <% end %>
