@@ -1,13 +1,18 @@
 <ul>
-    <%= @cart.each do |t| %>
+    <%= cart.each do |t| %>
 
-       <li> <%= t.name %></li>
+       <li> <%= t %></li>
 
         <% end %>
     </ul>
 
         
+<%= form_tag ({Controller:"Products", action: "add_to_cart", method: "post"}) do %>
 
+    <input name=product>
+    <input type=submit value="add to cart">
+
+    <% end %>
 
 
     

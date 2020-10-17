@@ -5,13 +5,9 @@ class ProductsController < ApplicationController
     end
 
     def add_to_cart
-
-    product = params[:product]
- 
-        cart = session[:cart] || []
-        cart << product
-  
-        session[:cart] = cart
+        cart << params[:product]
+    
+        render :index
     end
 
 end
